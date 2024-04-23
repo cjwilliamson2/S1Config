@@ -1,0 +1,229 @@
+!! NETLAB+ saved configuration: time="2024-01-30 21:08:59 UTC" device="S1" hardware="C2960" reservation="7071"
+!
+! Last configuration change at 00:03:00 UTC Mon Mar 1 1993
+!
+version 15.0
+no service pad
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+!
+hostname Switch
+!
+boot-start-marker
+boot-end-marker
+!
+!
+no aaa new-model
+system mtu routing 1500
+!
+!
+!
+!
+crypto pki trustpoint TP-self-signed-1151194240
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-1151194240
+ revocation-check none
+ rsakeypair TP-self-signed-1151194240
+!
+!
+crypto pki certificate chain TP-self-signed-1151194240
+ certificate self-signed 01
+  3082022B 30820194 A0030201 02020101 300D0609 2A864886 F70D0101 05050030 
+  31312F30 2D060355 04031326 494F532D 53656C66 2D536967 6E65642D 43657274 
+  69666963 6174652D 31313531 31393432 3430301E 170D3933 30333031 30303032 
+  35365A17 0D323030 31303130 30303030 305A3031 312F302D 06035504 03132649 
+  4F532D53 656C662D 5369676E 65642D43 65727469 66696361 74652D31 31353131 
+  39343234 3030819F 300D0609 2A864886 F70D0101 01050003 818D0030 81890281 
+  81009215 7CE0D613 AF5B4AD6 7C8A2AAC 732129CD AC6AA647 ECDB7D47 BF15FABD 
+  686CA5C4 66F23879 BAF099D6 6B5E77A5 2815F0C8 3E6B6BC8 F79157CA 051DF677 
+  39060339 8B10B080 4454BE76 779F1726 A0CC9145 3180C654 FFF5FFA2 B5D32AB6 
+  F30B5B93 E7A0BB52 F5A8A652 1341536B A6F50036 CC0C483E 71B2037A A997980D 
+  7A490203 010001A3 53305130 0F060355 1D130101 FF040530 030101FF 301F0603 
+  551D2304 18301680 143376A8 BB4BB4B8 DBADC8BD 47759FEF 50D6060D 0A301D06 
+  03551D0E 04160414 3376A8BB 4BB4B8DB ADC8BD47 759FEF50 D6060D0A 300D0609 
+  2A864886 F70D0101 05050003 8181004B D39A27FA 283F7A3C F91E91D6 F68FC94A 
+  044FA672 F9425560 106FD067 742FCFB6 A94A70E9 6579E4C1 7654629D 77EC78FC 
+  4203D040 65970BDE 6472D825 D792DA8B 1491A1CC 8F084269 9AE51C1B CFD7E775 
+  9251BF07 88D7830D EE7E74D1 A9E94B17 CE968332 28F3B3A2 EB7B6215 98111C9D 
+  C66F0DB2 8C5C2510 617860AE 3E9637
+  	quit
+!
+!
+!
+!
+!
+spanning-tree mode pvst
+spanning-tree extend system-id
+!
+vlan internal allocation policy ascending
+!
+!
+!
+!
+!
+!
+interface FastEthernet0/1
+ no shutdown
+!
+interface FastEthernet0/2
+ switchport access vlan 999
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/3
+ switchport trunk native vlan 1000
+ switchport trunk allowed vlan 20,30,40,1000
+ switchport mode trunk
+ no shutdown
+!
+interface FastEthernet0/4
+ switchport access vlan 999
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/5
+ no shutdown
+!
+interface FastEthernet0/6
+ switchport access vlan 30
+ switchport mode access
+ no shutdown
+!
+interface FastEthernet0/7
+ switchport access vlan 999
+ switchport mode access
+ no shutdown
+!
+interface FastEthernet0/8
+ switchport access vlan 999
+ switchport mode access
+ no shutdown
+!
+interface FastEthernet0/9
+ switchport access vlan 999
+ switchport mode access
+ no shutdown
+!
+interface FastEthernet0/10
+ switchport access vlan 999
+ switchport mode access
+ no shutdown
+!
+interface FastEthernet0/11
+ switchport access vlan 999
+ switchport mode access
+ no shutdown
+!
+interface FastEthernet0/12
+ switchport access vlan 999
+ switchport mode access
+ no shutdown
+!
+interface FastEthernet0/13
+ switchport access vlan 999
+ switchport mode access
+ no shutdown
+!
+interface FastEthernet0/14
+ switchport access vlan 999
+ switchport mode access
+ no shutdown
+!
+interface FastEthernet0/15
+ switchport access vlan 999
+ switchport mode access
+ no shutdown
+!
+interface FastEthernet0/16
+ switchport access vlan 999
+ switchport mode access
+ no shutdown
+!
+interface FastEthernet0/17
+ switchport access vlan 999
+ switchport mode access
+ no shutdown
+!
+interface FastEthernet0/18
+ switchport access vlan 999
+ switchport mode access
+ no shutdown
+!
+interface FastEthernet0/19
+ switchport access vlan 999
+ switchport mode access
+ no shutdown
+!
+interface FastEthernet0/20
+ switchport access vlan 999
+ switchport mode access
+ no shutdown
+!
+interface FastEthernet0/21
+ switchport access vlan 999
+ switchport mode access
+ no shutdown
+!
+interface FastEthernet0/22
+ switchport access vlan 999
+ switchport mode access
+ no shutdown
+!
+interface FastEthernet0/23
+ switchport access vlan 999
+ switchport mode access
+ no shutdown
+!
+interface FastEthernet0/24
+ switchport access vlan 999
+ switchport mode access
+ no shutdown
+!
+interface GigabitEthernet0/1
+ switchport access vlan 999
+ switchport mode access
+ no shutdown
+!
+interface GigabitEthernet0/2
+ switchport access vlan 999
+ switchport mode access
+ no shutdown
+!
+interface Vlan1
+ no ip address
+ no shutdown
+!
+interface Vlan20
+ ip address 10.20.0.2 255.255.255.0
+ no shutdown
+!
+interface Vlan30
+ no ip address
+ no shutdown
+!
+interface Vlan40
+ no ip address
+ no shutdown
+!
+interface Vlan999
+ no ip address
+ no shutdown
+!
+interface Vlan1000
+ no ip address
+ no shutdown
+!
+ip default-gateway 10.20.0.1
+ip http server
+ip http secure-server
+!
+!
+line con 0
+ logging synchronous
+line vty 0 4
+ login
+line vty 5 15
+ login
+!
+end
