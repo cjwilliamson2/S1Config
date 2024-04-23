@@ -78,7 +78,7 @@ interface FastEthernet0/3
  no shutdown
 !
 interface FastEthernet0/4
- switchport access vlan 999
+ switchport access vlan 444
  switchport mode access
  shutdown
 !
@@ -199,7 +199,7 @@ interface Vlan20
  no shutdown
 !
 interface Vlan30
- no ip address
+ ip address 10.20.0.2 255.255.255.0
  no shutdown
 !
 interface Vlan40
@@ -222,7 +222,7 @@ ip http secure-server
 line con 0
  logging synchronous
 line vty 0 4
- transport input telnet
+ transport input all
  login
 line vty 5 15
  login
